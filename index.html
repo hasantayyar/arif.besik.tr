@@ -823,9 +823,9 @@
       <h2>Hizmetlerimiz</h2>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Elektrik Tesisatı</h3>
-          <p>Yeni konut ve işyeri elektrik tesisatı kurulumu, yenileme ve güncelleme işlemleri.</p>
+          <div class="service-icon">🚨</div>
+          <h3>Acil Servis</h3>
+          <p>7/24 acil elektrik arıza servisi. Hızlı çözüm garantisi.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">💡</div>
@@ -838,19 +838,19 @@
           <p>Priz montajı, sigorta panosu kurulumu, arıza tespiti ve onarımı.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Akıllı Ev Sistemleri</h3>
-          <p>Akıllı anahtar, sensörlü aydınlatma ve otomasyon sistemleri kurulumu.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🚨</div>
-          <h3>Acil Servis</h3>
-          <p>7/24 acil elektrik arıza servisi. Hızlı çözüm garantisi.</p>
-        </div>
-        <div class="service-card">
           <div class="service-icon">🔧</div>
           <h3>Bakım & Onarım</h3>
           <p>Periyodik elektrik kontrolleri, bakım ve onarım hizmetleri.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Elektrik Tesisatı</h3>
+          <p>Yeni konut ve işyeri elektrik tesisatı kurulumu, yenileme ve güncelleme işlemleri.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Akıllı Ev Sistemleri</h3>
+          <p>Akıllı anahtar, sensörlü aydınlatma ve otomasyon sistemleri kurulumu.</p>
         </div>
       </div>
     </section>
@@ -896,12 +896,12 @@
             <label for="service">🔧 Ne tür bir hizmet lazım?</label>
             <select id="service" required>
               <option value="">Hizmet seçin...</option>
-              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
-              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
-              <option value="Priz & Sigorta">🔌 Priz & Sigorta Arızası</option>
-              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
               <option value="Acil Arıza">🚨 Acil Arıza (7/24)</option>
+              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
+              <option value="Priz & Sigorta">🔌 Priz & Sigorta</option>
               <option value="Bakım & Onarım">🔧 Bakım & Onarım</option>
+              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
+              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
               <option value="Diğer">📋 Diğer</option>
             </select>
           </div>
@@ -973,12 +973,12 @@
             <label for="panelService">🔧 Ne tür bir hizmet lazım?</label>
             <select id="panelService" required>
               <option value="">Hizmet seçin...</option>
-              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
-              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
-              <option value="Priz & Sigorta">🔌 Priz & Sigorta Arızası</option>
-              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
               <option value="Acil Arıza">🚨 Acil Arıza (7/24)</option>
+              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
+              <option value="Priz & Sigorta">🔌 Priz & Sigorta</option>
               <option value="Bakım & Onarım">🔧 Bakım & Onarım</option>
+              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
+              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
               <option value="Diğer">📋 Diğer</option>
             </select>
           </div>
@@ -1021,64 +1021,42 @@
     </div>
 
     <script>
-      // WhatsApp Form Handler - Main Form
+      // WhatsApp phone number
+      const WHATSAPP_NUMBER = '905315524976';
+
+      // Function to send WhatsApp message
+      function sendWhatsAppMessage(service, district, details) {
+        let message = `Merhaba Arif Usta,\n\n`;
+        message += `İhtiyacım olan hizmet: ${service}\n`;
+        message += `Konum: ${district}, Ankara\n`;
+        
+        if (details && details.trim()) {
+          message += `\nEk bilgi: ${details}\n`;
+        }
+        
+        message += `\nSizinle görüşmek istiyorum.`;
+        
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+      }
+
+      // Main Contact Form
       document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
         const service = document.getElementById('service').value;
         const district = document.getElementById('district').value;
         const details = document.getElementById('details').value;
-        
-        // Create WhatsApp message
-        let message = `Merhaba Arif Usta,\n\n`;
-        message += `İhtiyacım olan hizmet: ${service}\n`;
-        message += `Konum: ${district}, Ankara\n`;
-        
-        if (details.trim()) {
-          message += `\nEk bilgi: ${details}\n`;
-        }
-        
-        message += `\nSizinle görüşmek istiyorum.`;
-        
-        // Encode message for URL
-        const encodedMessage = encodeURIComponent(message);
-        
-        // WhatsApp phone number
-        const phoneNumber = '905315524976';
-        
-        // Open WhatsApp
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        window.open(whatsappURL, '_blank');
+        sendWhatsAppMessage(service, district, details);
       });
 
-      // WhatsApp Form Handler - Panel Form
+      // Panel Contact Form
       document.getElementById('panelWhatsappForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
         const service = document.getElementById('panelService').value;
         const district = document.getElementById('panelDistrict').value;
         const details = document.getElementById('panelDetails').value;
-        
-        // Create WhatsApp message
-        let message = `Merhaba Arif Usta,\n\n`;
-        message += `İhtiyacım olan hizmet: ${service}\n`;
-        message += `Konum: ${district}, Ankara\n`;
-        
-        if (details.trim()) {
-          message += `\nEk bilgi: ${details}\n`;
-        }
-        
-        message += `\nSizinle görüşmek istiyorum.`;
-        
-        // Encode message for URL
-        const encodedMessage = encodeURIComponent(message);
-        
-        // WhatsApp phone number
-        const phoneNumber = '491634482593';
-        
-        // Open WhatsApp
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        window.open(whatsappURL, '_blank');
+        sendWhatsAppMessage(service, district, details);
       });
 
       // Smooth scroll for navigation
@@ -1133,3 +1111,4 @@
     </script>
   </body>
 </html>
+
