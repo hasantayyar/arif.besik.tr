@@ -1,1 +1,1135 @@
-<pre>OK</pre>
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arif Usta - Ankara Elektrikçi | Profesyonel Elektrik Hizmetleri</title>
+    <meta name="description" content="Ankara'da profesyonel elektrik hizmetleri. Lisanslı ve deneyimli elektrikçi. 7/24 hizmet. Hemen WhatsApp'tan ulaşın!" />
+    <meta name="author" content="Arif Usta - Ankara Elektrikçi" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url('bg.jpg') center/cover no-repeat fixed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        padding: 60px 20px 80px;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(3px);
+        z-index: 1;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+        z-index: 2;
+      }
+
+      .hero-content {
+        max-width: 1000px;
+        padding: 40px;
+        animation: fadeInUp 1s ease-out;
+        position: relative;
+        z-index: 3;
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+        margin-bottom: 25px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .hero p {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-weight: 300;
+      }
+
+      .hero p:last-of-type {
+        margin-bottom: 40px;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: #ffd700;
+        color: #000;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #25D366;
+        color: white;
+        padding: 18px 45px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        margin-top: 20px;
+      }
+
+      .cta-button:hover {
+        background: #128C7E;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ffd700;
+        transition: width 0.3s;
+      }
+
+      nav a:hover {
+        color: #ffd700;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* Sections */
+      section {
+        padding: 120px 40px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      section:not(.hero) {
+        min-height: auto;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 70px;
+        color: #2c3e50;
+        position: relative;
+        font-weight: 700;
+      }
+
+      h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 5px;
+        background: #ffd700;
+        margin: 20px auto 0;
+        border-radius: 3px;
+      }
+
+      /* Services Section */
+      #hizmetler {
+        background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .service-card {
+        background: white;
+        padding: 45px 35px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-align: center;
+        border: 1px solid #f0f0f0;
+        cursor: pointer;
+      }
+
+      .service-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        border-color: #ffd700;
+      }
+
+      .service-icon {
+        font-size: 4rem;
+        margin-bottom: 25px;
+        display: inline-block;
+        transition: transform 0.3s;
+      }
+
+      .service-card:hover .service-icon {
+        transform: scale(1.2) rotate(5deg);
+      }
+
+      .service-card h3 {
+        color: #2c3e50;
+        margin-bottom: 18px;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      .service-card p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #666;
+      }
+
+      /* About Section */
+      #hakkimda {
+        background: #f8f9fa;
+      }
+
+      .about-content {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 2;
+        color: #555;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin-top: 70px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 40px 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s;
+      }
+
+      .stat-box:hover {
+        transform: translateY(-10px);
+      }
+
+      .stat-box h3 {
+        font-size: 3.5rem;
+        color: #ffd700;
+        margin-bottom: 15px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .stat-box p {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        font-weight: 600;
+      }
+
+      /* WhatsApp Contact Section */
+      #iletisim {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #iletisim::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+      }
+
+      #iletisim::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+      }
+
+      #iletisim h2 {
+        color: white;
+        position: relative;
+        z-index: 1;
+      }
+
+      #iletisim h2::after {
+        background: white;
+      }
+
+      .contact-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
+      }
+
+      .whatsapp-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 1.05rem;
+        font-family: inherit;
+        transition: all 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #25D366;
+        box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .whatsapp-btn {
+        background: #25D366;
+        color: white;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+        margin-top: 10px;
+      }
+
+      .whatsapp-btn:hover {
+        background: #128C7E;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      }
+
+      .whatsapp-btn:active {
+        transform: translateY(0);
+      }
+
+      /* Footer */
+      footer {
+        background: #1a252f;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      footer p {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Tablet Responsive */
+      @media (max-width: 1024px) {
+        .hero h1 {
+          font-size: 3.5rem;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+
+        section {
+          padding: 100px 30px;
+        }
+
+        h2 {
+          font-size: 3rem;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .hero {
+          background-attachment: scroll;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+          letter-spacing: 1px;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .hero-content {
+          padding: 20px;
+        }
+
+        .cta-button {
+          font-size: 1rem;
+          padding: 15px 35px;
+        }
+
+        nav {
+          padding: 15px 0;
+        }
+
+        nav ul {
+          gap: 20px;
+          font-size: 0.9rem;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 50px;
+        }
+
+        section {
+          padding: 70px 20px;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .service-card {
+          padding: 35px 25px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .about-content {
+          font-size: 1.05rem;
+        }
+
+        .contact-container {
+          padding: 30px 25px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 1rem;
+        }
+
+        .whatsapp-btn {
+          font-size: 1.05rem;
+          padding: 15px 30px;
+        }
+      }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Floating WhatsApp Button */
+      .floating-whatsapp {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: all 0.3s;
+        animation: pulse 2s infinite;
+      }
+
+      .floating-whatsapp:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      }
+
+      .floating-whatsapp svg {
+        width: 40px;
+        height: 40px;
+        fill: white;
+      }
+
+      .floating-whatsapp .tooltip {
+        position: absolute;
+        right: 80px;
+        background: #2c3e50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 0.95rem;
+        font-weight: 600;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+
+      .floating-whatsapp .tooltip::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid #2c3e50;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+      }
+
+      .floating-whatsapp:hover .tooltip {
+        opacity: 1;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+        }
+      }
+
+      /* Sliding Panel */
+      .contact-panel {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 450px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        overflow-y: auto;
+      }
+
+      .contact-panel.active {
+        right: 0;
+      }
+
+      .panel-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+
+      .panel-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .panel-header {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 30px;
+        position: relative;
+      }
+
+      .panel-header h3 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .panel-header p {
+        font-size: 1rem;
+        opacity: 0.95;
+      }
+
+      .panel-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+
+      .panel-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(90deg);
+      }
+
+      .panel-content {
+        padding: 35px 30px;
+      }
+
+      .panel-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .panel-form .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .panel-form .form-group label {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+      }
+
+      .panel-form .form-group select,
+      .panel-form .form-group textarea {
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 1.05rem;
+        font-family: inherit;
+        transition: all 0.3s;
+      }
+
+      .panel-form .form-group select:focus,
+      .panel-form .form-group textarea:focus {
+        outline: none;
+        border-color: #25D366;
+        box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+      }
+
+      .panel-form .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .panel-submit {
+        background: #25D366;
+        color: white;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+        margin-top: 10px;
+      }
+
+      .panel-submit:hover {
+        background: #128C7E;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Mobile Responsive for Panel */
+      @media (max-width: 768px) {
+        .contact-panel {
+          width: 100%;
+          right: -100%;
+        }
+
+        .floating-whatsapp {
+          width: 60px;
+          height: 60px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .floating-whatsapp svg {
+          width: 32px;
+          height: 32px;
+        }
+
+        .floating-whatsapp .tooltip {
+          display: none;
+        }
+
+        .panel-content {
+          padding: 25px 20px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        nav, .floating-whatsapp, .contact-panel, .panel-overlay {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#anasayfa">Ana Sayfa</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">✓ Lisanslı & Sigortalı</div>
+        <h1>Arif Usta</h1>
+        <p>Ankara'nın Güvenilir Elektrikçisi</p>
+        <p>15+ Yıl Tecrübe | 7/24 Hizmet | Kaliteli İşçilik</p>
+        <a href="#iletisim" class="cta-button">Hemen Teklif Alın</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="hizmetler">
+      <h2>Hizmetlerimiz</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Elektrik Tesisatı</h3>
+          <p>Yeni konut ve işyeri elektrik tesisatı kurulumu, yenileme ve güncelleme işlemleri.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Aydınlatma Sistemleri</h3>
+          <p>LED aydınlatma, spot montajı, avize kurulumu ve aydınlatma projelendirme.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3>Priz & Sigorta</h3>
+          <p>Priz montajı, sigorta panosu kurulumu, arıza tespiti ve onarımı.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Akıllı Ev Sistemleri</h3>
+          <p>Akıllı anahtar, sensörlü aydınlatma ve otomasyon sistemleri kurulumu.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Acil Servis</h3>
+          <p>7/24 acil elektrik arıza servisi. Hızlı çözüm garantisi.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Bakım & Onarım</h3>
+          <p>Periyodik elektrik kontrolleri, bakım ve onarım hizmetleri.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <div class="about-content">
+        <p>
+          Merhaba, ben Arif Usta. 20 yılı aşkın süredir Ankara'da elektrik sektöründe hizmet vermekteyim. 
+          Lisanslı ve sigortalı olarak çalışıyor, her işimi titizlikle ve güvenlik standartlarına uygun olarak gerçekleştiriyorum.
+        </p>
+        <p style="margin-top: 20px;">
+          Konutlardan ticari işletmelere kadar geniş yelpazede elektrik hizmetleri sunuyorum. 
+          Müşteri memnuniyeti ve kaliteli iş benim önceliğimdir.
+        </p>
+        <div class="stats">
+          <div class="stat-box">
+            <h3>20+</h3>
+            <p>Yıl Tecrübe</p>
+          </div>
+          <div class="stat-box">
+            <h3>400+</h3>
+            <p>Mutlu Müşteri</p>
+          </div>
+          <div class="stat-box">
+            <h3>7/24</h3>
+            <p>Hizmet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Contact Section -->
+    <section id="iletisim">
+      <h2>Hemen İletişime Geçin</h2>
+      <div class="contact-container">
+        <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1rem;">
+          2 adımda hızlıca iletişime geçin
+        </p>
+        <form class="whatsapp-form" id="whatsappForm">
+          <div class="form-group">
+            <label for="service">🔧 Ne tür bir hizmet lazım?</label>
+            <select id="service" required>
+              <option value="">Hizmet seçin...</option>
+              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
+              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
+              <option value="Priz & Sigorta">🔌 Priz & Sigorta Arızası</option>
+              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
+              <option value="Acil Arıza">🚨 Acil Arıza (7/24)</option>
+              <option value="Bakım & Onarım">🔧 Bakım & Onarım</option>
+              <option value="Diğer">📋 Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="district">📍 Ankara'da hangi ilçedesiniz?</label>
+            <select id="district" required>
+              <option value="">İlçe seçin...</option>
+              <option value="Çankaya">Çankaya</option>
+              <option value="Keçiören">Keçiören</option>
+              <option value="Mamak">Mamak</option>
+              <option value="Yenimahalle">Yenimahalle</option>
+              <option value="Etimesgut">Etimesgut</option>
+              <option value="Sincan">Sincan</option>
+              <option value="Altındağ">Altındağ</option>
+              <option value="Pursaklar">Pursaklar</option>
+              <option value="Gölbaşı">Gölbaşı</option>
+              <option value="Polatlı">Polatlı</option>
+              <option value="Beypazarı">Beypazarı</option>
+              <option value="Elmadağ">Elmadağ</option>
+              <option value="Akyurt">Akyurt</option>
+              <option value="Kalecik">Kalecik</option>
+              <option value="Çubuk">Çubuk</option>
+              <option value="Haymana">Haymana</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">💬 Detay eklemek isterseniz (opsiyonel)</label>
+            <textarea id="details" placeholder="Varsa ek açıklama..."></textarea>
+          </div>
+
+          <button type="submit" class="whatsapp-btn">
+            <span style="font-size: 1.5rem;">📱</span>
+            WhatsApp ile Devam Et
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Arif Usta - Ankara Elektrikçi. Tüm hakları saklıdır.</p>
+      <p style="margin-top: 10px; font-size: 0.9rem;">Lisanslı & Sigortalı Hizmet</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp" id="floatingBtn">
+      <span class="tooltip">Hızlı İletişim</span>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.163 0 0 7.163 0 16c0 2.83.745 5.49 2.042 7.791L0 32l8.333-2.042C10.585 31.255 13.208 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm9.333 22.667c-.354 1-2.083 1.875-2.937 2-.771.104-1.771.146-2.854-.177-.656-.198-1.5-.458-2.583-.906-4.542-1.875-7.5-6.458-7.729-6.75-.229-.292-1.896-2.521-1.896-4.813s1.208-3.417 1.635-3.875c.427-.458.938-.573 1.25-.573s.625 0 .896.021c.292.021.677-.104.958.729.292.833.979 2.396 1.063 2.563.083.167.146.375.021.604-.125.229-.208.375-.417.583-.208.208-.417.458-.583.625-.208.167-.417.354-.188.708.229.354.979 1.625 2.104 2.625 1.458 1.292 2.667 1.708 3.042 1.896.375.188.604.167.833-.104.229-.271.958-1.104 1.208-1.479.25-.375.5-.313.854-.188.354.125 2.229 1.042 2.604 1.229.375.188.625.271.708.438.083.167.083.958-.271 1.958z"/>
+      </svg>
+    </div>
+
+    <!-- Panel Overlay -->
+    <div class="panel-overlay" id="panelOverlay"></div>
+
+    <!-- Sliding Contact Panel -->
+    <div class="contact-panel" id="contactPanel">
+      <div class="panel-header">
+        <button class="panel-close" id="closePanel">×</button>
+        <h3>Hızlı İletişim</h3>
+        <p>2 adımda WhatsApp'tan ulaşın</p>
+      </div>
+      <div class="panel-content">
+        <form class="panel-form" id="panelWhatsappForm">
+          <div class="form-group">
+            <label for="panelService">🔧 Ne tür bir hizmet lazım?</label>
+            <select id="panelService" required>
+              <option value="">Hizmet seçin...</option>
+              <option value="Elektrik Tesisatı">⚡ Elektrik Tesisatı</option>
+              <option value="Aydınlatma Sistemleri">💡 Aydınlatma Sistemleri</option>
+              <option value="Priz & Sigorta">🔌 Priz & Sigorta Arızası</option>
+              <option value="Akıllı Ev Sistemleri">🏠 Akıllı Ev Sistemleri</option>
+              <option value="Acil Arıza">🚨 Acil Arıza (7/24)</option>
+              <option value="Bakım & Onarım">🔧 Bakım & Onarım</option>
+              <option value="Diğer">📋 Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="panelDistrict">📍 Ankara'da hangi ilçedesiniz?</label>
+            <select id="panelDistrict" required>
+              <option value="">İlçe seçin...</option>
+              <option value="Çankaya">Çankaya</option>
+              <option value="Keçiören">Keçiören</option>
+              <option value="Mamak">Mamak</option>
+              <option value="Yenimahalle">Yenimahalle</option>
+              <option value="Etimesgut">Etimesgut</option>
+              <option value="Sincan">Sincan</option>
+              <option value="Altındağ">Altındağ</option>
+              <option value="Pursaklar">Pursaklar</option>
+              <option value="Gölbaşı">Gölbaşı</option>
+              <option value="Polatlı">Polatlı</option>
+              <option value="Beypazarı">Beypazarı</option>
+              <option value="Elmadağ">Elmadağ</option>
+              <option value="Akyurt">Akyurt</option>
+              <option value="Kalecik">Kalecik</option>
+              <option value="Çubuk">Çubuk</option>
+              <option value="Haymana">Haymana</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="panelDetails">💬 Detay eklemek isterseniz (opsiyonel)</label>
+            <textarea id="panelDetails" placeholder="Varsa ek açıklama..."></textarea>
+          </div>
+
+          <button type="submit" class="panel-submit">
+            <span style="font-size: 1.5rem;">📱</span>
+            WhatsApp ile Devam Et
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // WhatsApp Form Handler - Main Form
+      document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const service = document.getElementById('service').value;
+        const district = document.getElementById('district').value;
+        const details = document.getElementById('details').value;
+        
+        // Create WhatsApp message
+        let message = `Merhaba Arif Usta,\n\n`;
+        message += `İhtiyacım olan hizmet: ${service}\n`;
+        message += `Konum: ${district}, Ankara\n`;
+        
+        if (details.trim()) {
+          message += `\nEk bilgi: ${details}\n`;
+        }
+        
+        message += `\nSizinle görüşmek istiyorum.`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // WhatsApp phone number
+        const phoneNumber = '0505....';
+        
+        // Open WhatsApp
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+      });
+
+      // WhatsApp Form Handler - Panel Form
+      document.getElementById('panelWhatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const service = document.getElementById('panelService').value;
+        const district = document.getElementById('panelDistrict').value;
+        const details = document.getElementById('panelDetails').value;
+        
+        // Create WhatsApp message
+        let message = `Merhaba Arif Usta,\n\n`;
+        message += `İhtiyacım olan hizmet: ${service}\n`;
+        message += `Konum: ${district}, Ankara\n`;
+        
+        if (details.trim()) {
+          message += `\nEk bilgi: ${details}\n`;
+        }
+        
+        message += `\nSizinle görüşmek istiyorum.`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // WhatsApp phone number
+        const phoneNumber = '491634482593';
+        
+        // Open WhatsApp
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+      });
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Service Cards - Click to scroll to contact form
+      document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const contactSection = document.getElementById('iletisim');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Floating WhatsApp Button - Open Panel
+      const floatingBtn = document.getElementById('floatingBtn');
+      const contactPanel = document.getElementById('contactPanel');
+      const panelOverlay = document.getElementById('panelOverlay');
+      const closePanel = document.getElementById('closePanel');
+
+      floatingBtn.addEventListener('click', function() {
+        contactPanel.classList.add('active');
+        panelOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close Panel
+      function closePanelFunc() {
+        contactPanel.classList.remove('active');
+        panelOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      closePanel.addEventListener('click', closePanelFunc);
+      panelOverlay.addEventListener('click', closePanelFunc);
+
+      // Close panel on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && contactPanel.classList.contains('active')) {
+          closePanelFunc();
+        }
+      });
+    </script>
+  </body>
+</html>
