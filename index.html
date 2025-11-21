@@ -6,6 +6,73 @@
     <title>Arif Usta - Ankara Elektrikçi | Profesyonel Elektrik Hizmetleri</title>
     <meta name="description" content="Ankara'da profesyonel elektrik hizmetleri. Lisanslı ve deneyimli elektrikçi. 7/24 hizmet. Hemen WhatsApp'tan ulaşın!" />
     <meta name="author" content="Arif Usta - Ankara Elektrikçi" />
+    <meta name="keywords" content="ankara elektrikçi, elektrik ustası, elektrik tamiri, acil elektrikçi, elektrik arıza, elektrik tesisatı ankara" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Arif Usta - Ankara Elektrikçi | Profesyonel Elektrik Hizmetleri" />
+    <meta property="og:description" content="20 yıllık tecrübe ile Ankara'da profesyonel elektrik hizmetleri. Lisanslı, sigortalı, 7/24 hizmet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arif Usta - Ankara Elektrikçi" />
+    <meta name="twitter:description" content="20 yıllık tecrübe ile Ankara'da profesyonel elektrik hizmetleri." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://wa.me" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Arif Usta - Ankara Elektrikçi",
+      "image": "",
+      "description": "20 yıllık tecrübe ile Ankara'da profesyonel elektrik hizmetleri. Lisanslı, sigortalı, 7/24 hizmet.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ankara",
+        "addressCountry": "TR"
+      },
+      "telephone": "+905315524976",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Ankara"
+      },
+      "serviceType": [
+        "Elektrik Tamiri",
+        "Elektrik Tesisatı",
+        "Aydınlatma Sistemleri",
+        "Acil Elektrik Servisi",
+        "Akıllı Ev Sistemleri"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "400"
+      }
+    }
+    </script>
+    
     <style>
       * {
         margin: 0;
@@ -30,7 +97,7 @@
         text-align: center;
         color: white;
         position: relative;
-        padding: 60px 20px 80px;
+        padding: 40px 20px;
       }
 
       .hero::before {
@@ -93,6 +160,35 @@
         margin-bottom: 30px;
         font-size: 1.1rem;
         box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        animation: pulse-badge 2s infinite;
+      }
+
+      @keyframes pulse-badge {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .hero-phone {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 25px 0;
+        letter-spacing: 1px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .hero-phone a {
+        color: #ffd700;
+        text-decoration: none;
       }
 
       .cta-button {
@@ -115,51 +211,51 @@
         box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
       }
 
-      /* Navigation */
-      nav {
+      /* Quick Contact Bar - Simple and Clean */
+      .quick-contact-bar {
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 12px 20px;
         z-index: 1000;
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      nav ul {
-        list-style: none;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
-        gap: 50px;
+        align-items: center;
+        gap: 15px;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
       }
 
-      nav a {
+      .quick-contact-bar.visible {
+        transform: translateY(0);
+      }
+
+      .quick-contact-bar a {
         color: white;
         text-decoration: none;
         font-weight: 600;
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        background: #25D366;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         transition: all 0.3s;
-        position: relative;
       }
 
-      nav a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #ffd700;
-        transition: width 0.3s;
+      .quick-contact-bar a:hover {
+        background: #128C7E;
+        transform: scale(1.05);
       }
 
-      nav a:hover {
+      .quick-contact-text {
         color: #ffd700;
-      }
-
-      nav a:hover::after {
-        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 600;
       }
 
       /* Sections */
@@ -466,6 +562,7 @@
       @media (max-width: 768px) {
         .hero {
           background-attachment: scroll;
+          padding: 30px 20px;
         }
 
         .hero h1 {
@@ -481,18 +578,28 @@
           padding: 20px;
         }
 
+        .hero-phone {
+          font-size: 1.4rem;
+          padding: 12px 20px;
+          margin: 20px 0;
+        }
+
         .cta-button {
           font-size: 1rem;
           padding: 15px 35px;
         }
 
-        nav {
-          padding: 15px 0;
+        .quick-contact-bar {
+          padding: 10px 15px;
         }
 
-        nav ul {
-          gap: 20px;
-          font-size: 0.9rem;
+        .quick-contact-bar a {
+          font-size: 0.85rem;
+          padding: 8px 16px;
+        }
+
+        .quick-contact-text {
+          font-size: 0.8rem;
         }
 
         h2 {
@@ -522,6 +629,33 @@
           font-size: 1.05rem;
         }
 
+        .certifications {
+          gap: 20px;
+        }
+
+        .cert-badge {
+          min-width: 150px;
+          padding: 20px 25px;
+        }
+
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-item {
+          padding: 25px 20px;
+          margin-bottom: 20px;
+        }
+
+        .faq-question {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+
+        .faq-answer {
+          font-size: 1rem;
+        }
+
         .contact-container {
           padding: 30px 25px;
         }
@@ -535,6 +669,14 @@
         .whatsapp-btn {
           font-size: 1.05rem;
           padding: 15px 30px;
+        }
+
+        .scroll-to-top {
+          width: 45px;
+          height: 45px;
+          bottom: 90px;
+          right: 20px;
+          font-size: 1.3rem;
         }
       }
 
@@ -713,6 +855,7 @@
         font-size: 1.05rem;
       }
 
+      .panel-form .form-group input,
       .panel-form .form-group select,
       .panel-form .form-group textarea {
         padding: 15px;
@@ -723,6 +866,7 @@
         transition: all 0.3s;
       }
 
+      .panel-form .form-group input:focus,
       .panel-form .form-group select:focus,
       .panel-form .form-group textarea:focus {
         outline: none;
@@ -787,9 +931,216 @@
         }
       }
 
+      /* Scroll to Top Button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 110px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        z-index: 998;
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-to-top:hover {
+        background: #ffd700;
+        color: #2c3e50;
+        transform: translateY(-3px);
+      }
+
+      /* Testimonials Section */
+      #testimonials {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      #testimonials h2 {
+        color: white;
+      }
+
+      #testimonials h2::after {
+        background: white;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 35px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .testimonial-stars {
+        color: #ffd700;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+
+      .testimonial-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .testimonial-location {
+        opacity: 0.85;
+        font-size: 0.95rem;
+        margin-top: 5px;
+      }
+
+      /* FAQ Section */
+      #faq {
+        background: #f8f9fa;
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: white;
+        margin-bottom: 25px;
+        padding: 30px 35px;
+        border-radius: 12px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .faq-question {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .faq-answer {
+        color: #555;
+        line-height: 1.8;
+        font-size: 1.05rem;
+      }
+
+      /* Certifications Section */
+      .certifications {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .cert-badge {
+        background: white;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        min-width: 180px;
+        transition: all 0.3s;
+      }
+
+      .cert-badge:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .cert-icon {
+        font-size: 3rem;
+        margin-bottom: 12px;
+      }
+
+      .cert-title {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.05rem;
+      }
+
+      /* Loading Animation */
+      @keyframes slideInFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInFromRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+      }
+
+      .animate-on-scroll.animated {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
       /* Print styles */
       @media print {
-        nav, .floating-whatsapp, .contact-panel, .panel-overlay {
+        .quick-contact-bar, .floating-whatsapp, .contact-panel, .panel-overlay, .scroll-to-top {
           display: none;
         }
       }
@@ -797,14 +1148,14 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#hizmetler">Hizmetler</a></li>
-        <li><a href="#hakkimda">Hakkımda</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
-      </ul>
-    </nav>
+    <!-- Quick Contact Bar (shows on scroll) -->
+    <div class="quick-contact-bar" id="quickContactBar">
+      <span class="quick-contact-text">⚡ Arif Usta - Elektrikçi</span>
+      <a href="https://wa.me/905315524976" target="_blank" rel="noopener">
+        <span>📱</span>
+        <span>WhatsApp ile Ulaş</span>
+      </a>
+    </div>
 
     <!-- Hero Section -->
     <section id="anasayfa" class="hero">
@@ -813,7 +1164,10 @@
         <h1>Arif Usta</h1>
         <p>Ankara'nın Güvenilir Elektrikçisi</p>
         <p>20 Yıl Tecrübe | 7/24 Hizmet | Kaliteli İşçilik</p>
-        <a href="#iletisim" class="cta-button">Hemen Teklif Alın</a>
+        <div class="hero-phone">
+          📞 <a href="tel:+905315524976">0531 552 49 76</a>
+        </div>
+        <a href="https://wa.me/905315524976" target="_blank" rel="noopener" class="cta-button">WhatsApp ile Hemen Ulaş</a>
       </div>
     </section>
 
@@ -880,6 +1234,86 @@
             <p>Hizmet</p>
           </div>
         </div>
+        <div class="certifications">
+          <div class="cert-badge">
+            <div class="cert-icon">📜</div>
+            <div class="cert-title">Lisanslı Elektrikçi</div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🛡️</div>
+            <div class="cert-title">Sigortalı Hizmet</div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">✓</div>
+            <div class="cert-title">Garantili İşçilik</div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">⚠️</div>
+            <div class="cert-title">İş Güvenliği Sertifikalı</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="referanslar">
+      <h2>Müşteri Yorumları</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">
+            "Gece 11'de elektrikler gitti, aradım hemen geldi. 1 saat içinde halletti. Çok memnun kaldım, fiyatı da uygundu. Allah razı olsun."
+          </div>
+          <div class="testimonial-author">Mehmet Bey</div>
+          <div class="testimonial-location">Çankaya</div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">
+            "Dairenin tüm elektriklerini yaptırdık. Çok temiz ve düzenli çalışıyor, işini iyi biliyor. Herkese tavsiye ederim."
+          </div>
+          <div class="testimonial-author">Ayşe Hanım</div>
+          <div class="testimonial-location">Keçiören</div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">
+            "Dükkanımızda sürekli sigorta atıyordu, kimse düzgün bakamadı. Arif Usta geldi, sorunu buldu düzeltti. 3 aydır sorunsuz çalışıyor."
+          </div>
+          <div class="testimonial-author">Hasan Usta</div>
+          <div class="testimonial-location">Yenimahalle</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="sss">
+      <h2>Sıkça Sorulan Sorular</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Acil durumlarda ne kadar sürede gelebilirsiniz?</div>
+          <div class="faq-answer">Acil elektrik arızalarında, bulunduğunuz konuma göre ortalama 45-60 dakika içinde yerinde oluyoruz. 7/24 hizmet veriyoruz.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Fiyatlar nasıl belirleniyor?</div>
+          <div class="faq-answer">Fiyatlandırma, işin kapsamına ve kullanılacak malzemelere göre değişir. Keşif sonrası net fiyat teklifi veriyoruz. Şeffaf ve rekabetçi fiyatlandırma ilkemizdir.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Hangi bölgelere hizmet veriyorsunuz?</div>
+          <div class="faq-answer">Ankara merkez ilçelerinde her yere hizmet verebiliyorum. Çankaya, Keçiören, Yenimahalle, Mamak, Etimesgut başta olmak üzere tüm merkez ilçelere ulaşıyoruz.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">İşlerinize garanti veriyor musunuz?</div>
+          <div class="faq-answer">Evet, tüm işlerimize garanti veriyoruz. Kullandığımız malzemeler ve işçilik kalitesi garanti kapsamındadır. Garanti süreleri iş tipine göre değişir.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Ödeme seçenekleri nelerdir?</div>
+          <div class="faq-answer">Nakit veya havale/EFT ile ödeme kabul ediyoruz. Size en uygun ödeme şeklini birlikte belirleyebiliriz.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Malzemeler size mi ait?</div>
+          <div class="faq-answer">Genellikle tüm malzemeleri biz temin ediyoruz. Ancak isterseniz kendi malzemelerinizi de kullanabiliriz. Her iki seçenek için de destek veriyoruz.</div>
+        </div>
       </div>
     </section>
 
@@ -888,9 +1322,14 @@
       <h2>Hemen İletişime Geçin</h2>
       <div class="contact-container">
         <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1rem;">
-          2 adımda hızlıca iletişime geçin
+          Formu doldurun, WhatsApp'tan hızlıca ulaşın
         </p>
         <form class="whatsapp-form" id="whatsappForm">
+          <div class="form-group">
+            <label for="name">👤 Adınız (opsiyonel)</label>
+            <input type="text" id="name" placeholder="İsminiz...">
+          </div>
+
           <div class="form-group">
             <label for="service">🔧 Ne tür bir hizmet lazım?</label>
             <select id="service" required>
@@ -949,12 +1388,17 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <div class="floating-whatsapp" id="floatingBtn">
+    <div class="floating-whatsapp" id="floatingBtn" aria-label="WhatsApp ile İletişim">
       <span class="tooltip">Hızlı İletişim</span>
       <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <path d="M16 0C7.163 0 0 7.163 0 16c0 2.83.745 5.49 2.042 7.791L0 32l8.333-2.042C10.585 31.255 13.208 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm9.333 22.667c-.354 1-2.083 1.875-2.937 2-.771.104-1.771.146-2.854-.177-.656-.198-1.5-.458-2.583-.906-4.542-1.875-7.5-6.458-7.729-6.75-.229-.292-1.896-2.521-1.896-4.813s1.208-3.417 1.635-3.875c.427-.458.938-.573 1.25-.573s.625 0 .896.021c.292.021.677-.104.958.729.292.833.979 2.396 1.063 2.563.083.167.146.375.021.604-.125.229-.208.375-.417.583-.208.208-.417.458-.583.625-.208.167-.417.354-.188.708.229.354.979 1.625 2.104 2.625 1.458 1.292 2.667 1.708 3.042 1.896.375.188.604.167.833-.104.229-.271.958-1.104 1.208-1.479.25-.375.5-.313.854-.188.354.125 2.229 1.042 2.604 1.229.375.188.625.271.708.438.083.167.083.958-.271 1.958z"/>
       </svg>
     </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Yukarı Çık">
+      ↑
+    </button>
 
     <!-- Panel Overlay -->
     <div class="panel-overlay" id="panelOverlay"></div>
@@ -962,12 +1406,17 @@
     <!-- Sliding Contact Panel -->
     <div class="contact-panel" id="contactPanel">
       <div class="panel-header">
-        <button class="panel-close" id="closePanel">×</button>
+        <button class="panel-close" id="closePanel" aria-label="Kapat">×</button>
         <h3>Hızlı İletişim</h3>
-        <p>2 adımda WhatsApp'tan ulaşın</p>
+        <p>Formu doldurun, WhatsApp'tan ulaşın</p>
       </div>
       <div class="panel-content">
         <form class="panel-form" id="panelWhatsappForm">
+          <div class="form-group">
+            <label for="panelName">👤 Adınız (opsiyonel)</label>
+            <input type="text" id="panelName" placeholder="İsminiz...">
+          </div>
+
           <div class="form-group">
             <label for="panelService">🔧 Ne tür bir hizmet lazım?</label>
             <select id="panelService" required>
@@ -1024,8 +1473,13 @@
       const WHATSAPP_NUMBER = '905315524976';
 
       // Function to send WhatsApp message
-      function sendWhatsAppMessage(service, district, details) {
+      function sendWhatsAppMessage(name, service, district, details) {
         let message = `Merhaba Arif Usta,\n\n`;
+        
+        if (name && name.trim()) {
+          message += `Benim adım: ${name}\n`;
+        }
+        
         message += `İhtiyacım olan hizmet: ${service}\n`;
         message += `Konum: ${district}, Ankara\n`;
         
@@ -1043,30 +1497,70 @@
       // Main Contact Form
       document.getElementById('whatsappForm').addEventListener('submit', function(e) {
         e.preventDefault();
+        const name = document.getElementById('name').value;
         const service = document.getElementById('service').value;
         const district = document.getElementById('district').value;
         const details = document.getElementById('details').value;
-        sendWhatsAppMessage(service, district, details);
+        sendWhatsAppMessage(name, service, district, details);
       });
 
       // Panel Contact Form
       document.getElementById('panelWhatsappForm').addEventListener('submit', function(e) {
         e.preventDefault();
+        const name = document.getElementById('panelName').value;
         const service = document.getElementById('panelService').value;
         const district = document.getElementById('panelDistrict').value;
         const details = document.getElementById('panelDetails').value;
-        sendWhatsAppMessage(service, district, details);
+        sendWhatsAppMessage(name, service, district, details);
       });
 
-      // Smooth scroll for navigation
-      document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Quick Contact Bar - Show on scroll
+      const quickContactBar = document.getElementById('quickContactBar');
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 400) {
+          quickContactBar.classList.add('visible');
+        } else {
+          quickContactBar.classList.remove('visible');
+        }
+      });
+
+      // Scroll to Top Button
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 500) {
+          scrollToTopBtn.classList.add('visible');
+        } else {
+          scrollToTopBtn.classList.remove('visible');
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Animate on Scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
           }
         });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
       });
 
       // Service Cards - Click to scroll to contact form
@@ -1107,7 +1601,15 @@
           closePanelFunc();
         }
       });
+
+      // Add smooth loading animation
+      window.addEventListener('load', function() {
+        document.body.style.opacity = '0';
+        setTimeout(function() {
+          document.body.style.transition = 'opacity 0.5s';
+          document.body.style.opacity = '1';
+        }, 100);
+      });
     </script>
   </body>
 </html>
-
