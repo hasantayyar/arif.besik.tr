@@ -115,6 +115,38 @@
       .service-card h3 { color: #2c3e50; margin-bottom: 18px; font-size: 1.6rem; font-weight: 600; }
       .service-card p { font-size: 1.05rem; line-height: 1.7; color: #666; }
 
+      /* Why Choose Section */
+      #neden-ben { background: white; }
+      .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+      .why-item { background: #f8f9fa; padding: 30px; border-radius: 12px; border-left: 4px solid #ffd700; transition: all 0.3s; }
+      .why-item:hover { transform: translateX(5px); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); }
+      .why-item h3 { font-size: 1.3rem; color: #2c3e50; margin-bottom: 10px; font-weight: 600; }
+      .why-item p { color: #666; line-height: 1.7; }
+      
+      /* Process Section */
+      #nasil-calisiyoruz { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; }
+      #nasil-calisiyoruz h2 { color: white; }
+      #nasil-calisiyoruz h2::after { background: white; }
+      .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+      .process-step { text-align: center; padding: 30px 20px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.3s; position: relative; }
+      .process-step:hover { background: rgba(255, 255, 255, 0.15); transform: translateY(-5px); }
+      .process-step::after { content: '→'; position: absolute; right: -25px; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #ffd700; opacity: 0.7; }
+      .process-step:last-child::after { display: none; }
+      .step-number { width: 60px; height: 60px; background: #ffd700; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin: 0 auto 20px; }
+      .step-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
+      .step-desc { font-size: 0.95rem; opacity: 0.9; line-height: 1.6; }
+      
+      /* Emergency Banner */
+      .emergency-banner { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 25px 40px; text-align: center; position: relative; overflow: hidden; animation: emergency-pulse 2s infinite; }
+      .emergency-banner::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: emergency-rotate 10s linear infinite; }
+      @keyframes emergency-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(231, 76, 60, 0.5); } 50% { box-shadow: 0 0 40px rgba(231, 76, 60, 0.8); } }
+      @keyframes emergency-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      .emergency-content { position: relative; z-index: 1; }
+      .emergency-title { font-size: 2rem; font-weight: 700; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+      .emergency-text { font-size: 1.2rem; margin-bottom: 20px; }
+      .emergency-btn { display: inline-block; background: white; color: #e74c3c; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); }
+      .emergency-btn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); }
+      
       /* About Section */
       #hakkimda { background: #f8f9fa; }
       .about-content { max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.25rem; line-height: 2; color: #555; }
@@ -152,6 +184,9 @@
       @media (max-width: 1024px) {
         .hero h1 { font-size: 3.5rem; }
         .services-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .why-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        .process-steps { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        .process-step:nth-child(2)::after, .process-step:nth-child(4)::after { display: none; }
         section { padding: 100px 30px; }
         h2 { font-size: 3rem; }
       }
@@ -171,6 +206,14 @@
         section { padding: 70px 20px; }
         .services-grid { grid-template-columns: 1fr; gap: 25px; }
         .service-card { padding: 35px 25px; }
+        .why-grid { grid-template-columns: 1fr; gap: 20px; }
+        .why-item { padding: 25px 20px; }
+        .process-steps { grid-template-columns: 1fr; gap: 30px; }
+        .process-step::after { display: none; }
+        .emergency-banner { padding: 20px; }
+        .emergency-title { font-size: 1.5rem; }
+        .emergency-text { font-size: 1rem; }
+        .emergency-btn { font-size: 1.1rem; padding: 12px 30px; }
         .stats { grid-template-columns: 1fr; gap: 30px; }
         .about-content { font-size: 1.05rem; }
         .certifications { gap: 20px; }
@@ -294,6 +337,15 @@
       </div>
     </section>
 
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+      <div class="emergency-content">
+        <div class="emergency-title">🚨 ACİL ELEKTRİK ARIZA 7/24</div>
+        <div class="emergency-text">Elektrik kesildi mi? Sigorta mı attı? Hemen arayın!</div>
+        <a href="tel:+905315524976" class="emergency-btn">📞 0531 552 49 76</a>
+      </div>
+    </div>
+
     <!-- Services Section -->
     <section id="hizmetler">
       <h2>Hizmetlerimiz</h2>
@@ -331,6 +383,37 @@
       </div>
     </section>
 
+    <!-- Why Choose Section -->
+    <section id="neden-ben">
+      <h2>Neden Arif Usta?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Şeffaf Fiyatlandırma</h3>
+          <p>İş başlamadan önce net fiyat veriyorum. Gizli masraf yok, sürpriz fiyat yok. Ücretsiz keşif ile fiyatınızı öğrenin.</p>
+        </div>
+        <div class="why-item">
+          <h3>Hızlı Çözüm</h3>
+          <p>Acil durumlarda 45-60 dakikada yerinde oluyoruz. Sorunları hızlı tespit edip, aynı gün çözüyoruz.</p>
+        </div>
+        <div class="why-item">
+          <h3>Kaliteli Malzeme</h3>
+          <p>Sadece orijinal ve kaliteli malzeme kullanıyorum. Ucuz malzeme ile müşterimi mağdur etmem.</p>
+        </div>
+        <div class="why-item">
+          <h3>Garanti ve Güvenlik</h3>
+          <p>Tüm işlerimize garanti veriyorum. Lisanslı ve sigortalı çalışıyorum.</p>
+        </div>
+        <div class="why-item">
+          <h3>Kolay Ulaşım</h3>
+          <p>WhatsApp'tan anında ulaşın. Telefonlarınızı her zaman açık, mesajlarınıza hemen dönüyorum.</p>
+        </div>
+        <div class="why-item">
+          <h3>Temiz Çalışma</h3>
+          <p>İş yerini temiz bırakıyorum. Çöpleri ben topluyorum, etrafa dağınıklık yapmıyorum.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="hakkimda">
       <h2>Hakkımda</h2>
@@ -349,7 +432,7 @@
             <p>Yıl Tecrübe</p>
           </div>
           <div class="stat-box">
-            <h3>400+</h3>
+            <h3>500+</h3>
             <p>Mutlu Müşteri</p>
           </div>
           <div class="stat-box">
@@ -369,10 +452,6 @@
           <div class="cert-badge">
             <div class="cert-icon">✓</div>
             <div class="cert-title">Garantili İşçilik</div>
-          </div>
-          <div class="cert-badge">
-            <div class="cert-icon">⚠️</div>
-            <div class="cert-title">İş Güvenliği Sertifikalı</div>
           </div>
         </div>
       </div>
@@ -405,6 +484,33 @@
           </div>
           <div class="testimonial-author">Hasan Usta</div>
           <div class="testimonial-location">Yenimahalle</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="nasil-calisiyoruz">
+      <h2>Nasıl Çalışıyoruz?</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-title">İletişim</div>
+          <div class="step-desc">WhatsApp veya telefon ile bana ulaşın. Sorununuzu kısaca anlatın.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-title">Keşif</div>
+          <div class="step-desc">Ücretsiz keşif yapıyorum. İşin kapsamını görüp net fiyat veriyorum.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-title">İşe Başlama</div>
+          <div class="step-desc">Fiyatı onayladıktan sonra hemen işe başlıyorum. Aynı gün bitiriyorum.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-title">Teslim</div>
+          <div class="step-desc">İşi temiz teslim ediyorum. Memnuniyetiniz önemli.</div>
         </div>
       </div>
     </section>
@@ -537,7 +643,7 @@
         <form class="panel-form" id="panelWhatsappForm">
           <div class="form-group">
             <label for="panelName">👤 Adınız (opsiyonel)</label>
-            <input type="text" id="panelName" placeholder="İsminiz...">
+            <input type="text" id="panelName" placeholder="Adınız...">
           </div>
 
           <div class="form-group">
